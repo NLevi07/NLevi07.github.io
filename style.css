@@ -1,0 +1,15 @@
+a {
+    text-decoration: none;
+    color: rgb(153, 8, 8);
+    transition: 0,5s;
+    font-size: large;
+}
+body{
+    background-color: rgb(235, 205, 41);
+}
+
+a:hover {
+    color: rgb(107, 180, 180);
+    font-size: xx-large;
+    transition: 1s;
+}
