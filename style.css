@@ -66,9 +66,13 @@ a:hover{
   .kepek{
   float: left;
 }
-footer {
+.footer {
   text-align: center;
-  padding: 3px;
+  padding: 5px;
   background-color: rgb(82, 199, 235);
   color: white;
+  top: 100%;
+  position: sticky;
+  clear: left;
+  
 }
