@@ -71,15 +71,18 @@ body{
     width: 600px;
   }
   
-  .homoktovisnavigasion{
+ 
+  
+  .menu a {
+    background-color: #cfb7a2;
     text-align: center;
     padding: 15px;
-    background-color: #e6b486;
-    border: 2px solid #9e8053;
-    width: fit-content;
     margin: auto;
-    word-spacing: 35px
+  
+    width:fit-content ;
+    border: 2px solid #9e8053;
     
+    text-decoration: none;
   }
   
   a{
