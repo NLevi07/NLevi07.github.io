@@ -118,3 +118,19 @@ a:hover{
   width: 100%;
   }
 }
+fieldset.szamologep{
+  background-color: cyan;
+  border-color: black;
+}
+
+legend.szamologeptext{
+  color: black;
+}
+input.button{
+  width: 50px;
+  border-color: black;
+}
+
+input.inp{
+  border-color: black;    
+}
