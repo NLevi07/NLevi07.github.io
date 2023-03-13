@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pitagorasz</title>
+    <style>
+
+        
+        #triangle {
+            width: 0;
+            height: 0;
+            border-left: 0px solid transparent;
+            border-right: 200px solid transparent;
+            border-bottom: 100px solid #555;
+        }
+    </style>
+
+
+
+</head>
+
+<form action="javascript:void(0)">
+    
+        <br>
+        <legend>Adj meg legalább két oldalt!</legend>
+        <label for="a">a oldal:</label>
+        <input  type="text" name="pit" id="a" oninput="szamol()"><br>
+        <label for="b">b oldal:</label>
+        <input  type="text" name="pit" id="b" oninput="szamol()"><br>
+        <label for="c">c oldal:</label>
+        <input  type="text" name="pit" id="c" oninput="szamol()"><br><br>
+        <input type="button" name="pit" value="TÖRLÉS" onclick="torles()">
+    </fieldset>
+</form>
+
+<br>
+<h3>A megadott számok alapján rajzolt háromszög:</h3>
+<div id="triangle"></div>
+
+<script>
+    function szamol() {
+        if (a.value != 0 && b.value != 0) {
+            c.value = Math.sqrt((a.value * a.value) + (b.value * b.value));
+            document.getElementById("c").style.color = "red";
+
+        } else if (a.value != 0 && c.value != 0) {
+            b.value = Math.sqrt((c.value * c.value) - (a.value * a.value));
+            document.getElementById("b").style.color = "red";
+        } else if (b.value != 0 && c.value != 0) {
+            a.value = Math.sqrt((c.value * c.value) - (b.value * b.value));
+            document.getElementById("a").style.color = "red";
+        }
+
+        const haromszog = document.getElementById("triangle");
+        haromszog.style = "border-left:" + 0 + "px solid transparent;" +
+            "border-right:" + b.value * 10 + "px solid transparent;" +
+            "border-bottom:" + a.value * 10 + "px solid red;";
+
+
+    }
+
+    function torles() {
+        a.value = "";
+        b.value = "";
+        c.value = "";
+        document.location.reload();
+    }
+</script>
+
+
+
+</html>
